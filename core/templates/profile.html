@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    
+    <title> Your Profile | Lavender </title>
+
+    <link rel="title icon" href= "{% static "images/lavender.ico" %}">
+    
+    <link rel="stylesheet" type="text/css" href="{% static "css/all_pages.css" %}">
+    <script src="{% static "all_pages.js" %}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Open+Sans" rel="stylesheet">
+
+<style>
+    input[type=text]{
+        font-size: 120%;
+}
+</style>
+</head>
+    
+<body>
+
+    <a href="{% url 'index' %}"><img src="{% static "images/logo.png" %}" alt="lavender logo" style="width: 300px; height: 75px; border: none;"></a>
+    
+    <nav>
+        <ul class= "main">
+            <li><a href="{% url 'resources' %}"> Resources </a></li>
+            <li><a href="{% url 'login' %}"> Q + A </a></li>
+            <li><a href="{% url 'feedback' %}"> Feedback </a></li>
+        </ul>
+    </nav> 
+
+<h1> Your Profile </h1>
+    
+    <form style="font-family: 'Kalam', cursive; font-size: 120%;">
+        Your Name: <br>
+        <input type="text" name="name" required="">
+        <br>
+        
+		Preferred Pronouns <br>
+        <select name="pronouns" style="font-size: 110%; font-family: 'Open Sans', sans-serif;">
+            <option value="he/him" style="font-size: 110%; font-family: 'Open Sans', sans-serif;"> He/Him </option>
+            <option value="she/her" style="font-size: 110%; font-family: 'Open Sans', sans-serif;"> She/Her </option>
+            <option value="they/them" style="font-size: 110%; font-family: 'Open Sans', sans-serif;"> They/Them </option>
+        </select>
+        <br>
+        
+        Gender: <br>
+        <input type="text" name="gender" required="">
+        <br>
+        
+        Sexual Orientation: <br>
+        <input type="text" name="orientation" required="" style="margin-bottom: 15px;">
+        <br>
+        
+        <textarea rows= "4" cols= "50" name="comment" form="usrform" required="" style="font-family: 'Kalam', cursive; font-size: 19px;">Your Bio! Tell the world about yourself!</textarea>
+        
+        <input type="submit" value="Submit" style="display:block;">
+    </form>
+
+<footer>
+    <hr>
+    Juliana Parra, Colleen Avila, Alaya Barnett | Washington, D.C. | Girls Who Code Summer 2017
+</footer>
+
+</body>
+</html>

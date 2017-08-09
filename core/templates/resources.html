@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    
+  <title> Resources | Lavender </title>
+  <link rel="title icon" href= "{% static "images/lavender.ico" %}">
+    
+  <link rel="stylesheet" type="text/css" href="{% static "css/all_pages.css" %}">
+  <script src="{% static "js/all_pages.js" %}"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kalam|Open+Sans" rel="stylesheet">
+    
+<style>   
+.resources ul{
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+.resources li{
+    display:block;
+    height: 60.5px;
+    width: 200px;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.resources li:hover{
+    color: white;
+}
+    
+.resource_links a:link{
+    color: black;
+    text-decoration: none;
+}
+.resource_links a:hover{
+    color: #B79AEA;
+    text-decoration: underline;
+}
+.resource_links a:visited{
+    color: black;
+    text-decoration: none;
+}
+    
+.resource_links {
+    display:none;
+}
+   
+</style>
+    
+<script>
+    function showLabels(element){
+        var resource_link = document.getElementsByClassName('resource_links');
+        for (var i = 0; i < resource_link.length; i++) {
+        resource_link[i].style.display = 'none';
+        }
+
+        var resource_linksIdToShow = element.id.replace(/(\d)/g, '-$1');
+        document.getElementById(resource_linksIdToShow).style.display = 'block';
+    }
+    function showServices(element){
+        var resource_link = document.getElementsByClassName('resource_links');
+        for (var i = 0; i < resource_link.length; i++) {
+        resource_link[i].style.display = 'none';
+        }
+
+        var resource_linksIdToShow = element.id.replace(/(\d)/g, '-$1');
+        document.getElementById(resource_linksIdToShow).style.display = 'block';
+    }
+    function showHotlines(element){
+        var resource_link = document.getElementsByClassName('resource_links');
+        for (var i = 0; i < resource_link.length; i++) {
+        resource_link[i].style.display = 'none';
+        }
+
+        var resource_linksIdToShow = element.id.replace(/(\d)/g, '-$1');
+        document.getElementById(resource_linksIdToShow).style.display = 'block';
+    }
+    function showEvents(element){
+        var resource_link = document.getElementsByClassName('resource_links');
+        for (var i = 0; i < resource_link.length; i++) {
+        resource_link[i].style.display = 'none';
+        }
+
+        var resource_linksIdToShow = element.id.replace(/(\d)/g, '-$1');
+        document.getElementById(resource_linksIdToShow).style.display = 'block';
+    }
+    function showMedia(element){
+        var resource_link = document.getElementsByClassName('resource_links');
+        for (var i = 0; i < resource_link.length; i++) {
+        resource_link[i].style.display = 'none';
+        }
+
+        var resource_linksIdToShow = element.id.replace(/(\d)/g, '-$1');
+        document.getElementById(resource_linksIdToShow).style.display = 'block';
+    }
+    function showSexEd(element){
+        var resource_link = document.getElementsByClassName('resource_links');
+        for (var i = 0; i < resource_link.length; i++) {
+        resource_link[i].style.display = 'none';
+        }
+
+        var resource_linksIdToShow = element.id.replace(/(\d)/g, '-$1');
+        document.getElementById(resource_linksIdToShow).style.display = 'block';
+    }
+    function showOther(element){
+        var resource_link = document.getElementsByClassName('resource_links');
+        for (var i = 0; i < resource_link.length; i++) {
+        resource_link[i].style.display = 'none';
+        }
+
+        var resource_linksIdToShow = element.id.replace(/(\d)/g, '-$1');
+        document.getElementById(resource_linksIdToShow).style.display = 'block';
+    }
+</script>
+    
+</head>
+<body>
+
+<a href="{% url 'index' %}"><img src="{% static "images/logo.png" %}" alt="lavender logo" style="width: 300px; height: 75px; border: none;"></a>
+    
+    <nav>
+        <ul class= "main">
+            <li><a href="{% url 'login' %}"> Q + A </a></li>
+            <li><a href="{% url 'feedback' %}"> Feedback </a></li>
+            <li> <a href="{% url 'profile' %}"> Profile </a></li>
+        </ul>
+    </nav>
+    
+    <nav class="resources" style="float: left;">
+        <ul>
+            <li id="tabs1" onclick="showLabels(this)" style="background-color: #ffc6d3; border-bottom: 5px solid white"> Information on Labels </li>
+           
+            <li id="tabs2" onclick="showServices(this)" style="background-color: #FF716A; border-bottom: 5px solid white"> Services/Charity </li>
+       
+            <li id="tabs3" onclick="showHotlines(this)" style="background-color: #FFBF3E; border-bottom: 5px solid white"> Hotlines </li>
+            
+            <li id="tabs4" onclick="showEvents(this)" style="background-color: #FFFF64; border-bottom: 5px solid white"> Events </li>
+       
+            <li id="tabs5" onclick="showMedia(this)" style="background-color:#68FF7D; border-bottom: 5px solid white"> Media </li>
+           
+            <li id="tabs6" onclick="showSexEd(this)" style="background-color:#6EBBFF; border-bottom: 5px solid white"> Sex Ed </li>
+      
+            <li id="tabs7" onclick="showOther(this)" style="background-color:#AE7AFF"> Other Resources </li>
+        </ul>
+    </nav>
+    
+    <div id="tabs-1" class="resource_links">
+        <h2 style="text-align: center; color: #B79AEA; font-size: 25px;"> Information on Labels </h2>
+        <h3 style= "text-align: center;"> <a href="http://www.wearefamilycharleston.org/lgbt-a-z-glossary/" target="_blank">  Labels & Slang </a> </h3>
+            <p style="text-align: center;"> This is a cumulative list of the different labels used for people who indentify under the LGBTQ+ scope. It also has sections for offensive terms. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://itspronouncedmetrosexual.com/2013/01/a-comprehensive-list-of-lgbtq-term-definitions/#sthash.O0RYC8IA.dpbs" target="_blank"> Labels & Other LGBTQ+ Terms </a> </h3>
+            <p style="text-align: center;"> This is another reference for labels used in the LGBTQ+ community but it also includes slang, abbreviations, and explanations of the difference between sexual and romantic attraction. </p>
+        
+        <h3 style= "text-align: center;"> <a href="https://en.wikipedia.org/wiki/LGBT_symbols" target="_blank">  Pride Flags </a> </h3>
+            <p style="text-align: center;"> Here you can find information on the different pride flags not only for different sexual and gender identities, but also for cultural subgroups within the community. </p>
+    </div>
+    
+    <div id="tabs-2" class="resource_links" style="display=none;">
+        <h2 style="text-align: center; color: #B79AEA; font-size: 25px;"> Services & Charities </h2>
+        <h3 style= "text-align: center;"> <a href="https://give.hrc.org/ea-action/action?ea.client.id=1954&ea.campaign.id=62244&ea.tracking.id=DR_DON_GS_201708AQ&utm_source=GS&utm_medium=AD&utm_campaign=201708AQ&utm_content=211175605098&utm_term=lgbt%20donate" target="_blank"> The Human Rights Campaign </a> </h3>
+            <p style="text-align: center;"> The HRC is one of the longest-standing and most prominent organizations advocating for and raising money on the behalf of LGBTQ+ individuals. </p>
+        
+        <h3 style= "text-align: center;"> <a href="https://truecolorsfund.org/" target="_blank"> The True Colors Fund </a> </h3>
+            <p style="text-align: center;"> The True Colors Fund is an organization focused on working towards ending homelessness among LGBTQ+ youth. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.itgetsbetter.org/" target="_blank"> The It Gets Better Project </a> </h3>
+            <p style="text-align: center;"> The It Gets Better Project works to spread positive messages regarding LGBTQ+ indentities and to create a more inclusive global community, aiming to boost the confidence of LGBTQ+ individuals. </p>
+        
+        <h3 style= "text-align: center;"> <a href="https://www.glsen.org/" target="_blank"> GLSEN </a> </h3>
+            <p style="text-align: center;"> GLSEN works to make schools a more LGBTQ+ inclusive space, implementing programs such as The Day of Silence, a school day when students take a "vow of silence" to raise awareness for the struggles LGBTQ+ kids face regularly at school. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.transunitedfund.org/" target="_blank"> The Trans United Fund </a> </h3>
+            <p style="text-align: center;"> The Trans United Fund is the first and only transgender interest lobby that works mainly to build transgender/gender expansive political power and to educate allies programs. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.lgbtcenters.org/Centers/find-a-center.aspx " target="_blank"> Finding an LGBT Center Near You </a> </h3>
+            <p style="text-align: centerl"> This site provides a map to be able to locate the closest LGBT Center to you. LGBT Center are a physical safe space for LGBTQ+ people to find refuge in difficult times and to discover resources to help them get through those difficult experiences. </p>
+    </div>
+    
+    <div id="tabs-3" class="resource_links" style="display:none;">
+        <h2 style="text-align: center; color: #B79AEA; font-size: 25px;"> Hotlines </h2>
+        <h3 style= "text-align: center;"> <a href="https://lgbtqia.ucdavis.edu/support/hotlines.html" target="_blank"> General LGBTQ+ -Focused Hotlines </a> </h3>
+            <p style="text-align: center;"> This website is a comprehensive list of LGBT- centered hotlines as well as topic-specific and more general numbers to call. An additional feature is a pen pal setup service! </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.glbthotline.org/" target="_blank"> If Experiencing Bullying </a> </h3>
+            <p style="text-align: center;"> The LGBT National Help Center provides free and confidential peer-support and local resources. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.thetrevorproject.org/" target="_blank"> If Considering Taking your Life </a> </h3>
+            <p style="text-align: center;"> The Trevor Project is a crisis hotline LGBTQ+ youth seeking counsel or considering taking their own life. Their website provides more than hotlines through call, but also through text messaging and their own social network. </p>
+    </div>
+    
+    <div id="tabs-4" class="resource_links" style="display:none;">
+        <h2 style="text-align: center; color: #B79AEA; font-size: 25px;"> Events </h2>
+        <h3 style= "text-align: center;"> <a href="https://en.wikipedia.org/wiki/List_of_LGBT_awareness_days" target="_blank"> LGBTQ+ Awareness Days </a> </h3>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.sexualdiversity.org/events/" target="_blank"> Other LGBTQ+ Holidays/Days of Remembrance </a> </h3>
+        
+        <h3 style= "text-align: center;"> <a href="https://www.nighttours.com/gaypride/ " target="_blank"> Worldwide Pride Events </a> </h3>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.gaypridecalendar.com/" target="_blank"> Everything You Could Need for Pride </a> </h3>
+    </div>
+    
+    <div id="tabs-5" class="resource_links" style="display:none;">
+        <h2 style="text-align: center; color: #B79AEA; font-size: 25px;"> Media (TV Shows, Movies, Online Content) </h2>
+        <h3 style= "text-align: center;"> <a href="http://outlistproject.com/" target="_blank"> "The Out List" </a> </h3>
+            <p style="text-align: center;"> "The Out List" is a documentary in which a diverse group of LGBTQ+ -indentifying individuals recount their experiences coming to terms with their sexuality or gender identity. You can stream it on Netflix or HBO. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://sectionii.com/" target="_blank"> Section II = "Lesbian Netflix" </a> </h3>
+            <p style="text-align: center;"> Section II is a LGBTQ+ -focused streaming platform as well as a content creator netflix. Section II's nickname is "The Lesbian Netflix" because it focused on providing content for not only LGBTQ+ individuals but LGBTQ+ women. </p>
+        
+        <h3 style= "text-align: center;"> <a href="https://www.youtube.com/watch?v=2REkk9SCRn0" target="_blank"> "In a Heartbeat" </a> </h3>
+            <p style="text-align: center;"> "In a Heartbeat" is an animated short film curated by animation students Beth David and Esteban Bravo. Less than week since it was posted on Youtube, it has accumulated 14M views and 1M likes! </p>
+        
+        <h3 style= "text-align: center;"> <a href="ttps://www.youtube.com/user/HeyThere005" target="_blank"> Ash Hardell </a> </h3>
+            <p style="text-align: center;"> Ash Hardell is a Youtube creator with a lot of LGBTQ+ -specific videos ranging from topics such as the right time to come out to reclaiming LGBTQ+ slurs. With witty stop-motion animation, colorful text cards, and her bubbly personality, Hardell breaks down a lot of nuanced topics into easily comprehendable tid bits of information. </p>
+    </div>
+    
+    <div id="tabs-6" class="resource_links"  style="display:none;">
+        <h2 style="text-align: center; color: #B79AEA; font-size: 25px;"> Sex Ed </h2>
+        <h3 style= "text-align: center;"> <a href="http://teenhealthsource.com/blog/queering-sexual-education/" target="_blank"> Teen Health Source </a> </h3>
+            <p style="text-align: center;"> Teen Health Source has a mission towards "queering sex ed" and provides specifics on what that would like in schools, how it should be implemented, and the positive impact a modernized sex ed curriculum would have on LGBTQ+ youth. </p>
+        
+        <h3 style= "text-align: center;"> <a href="https://www.dailydot.com/irl/lgbtq-kids-missing-sex-education-schools-change/" target="_blank"> "LGBTQ kids are missing out on sex education—and it’s up to schools to change that" </a> </h3>
+            <p style="text-align: center;"> This <i> Daily Dot </i> article discusses what some schools are doing to include LGBT+ students in their sex ed curriculum, the problems they are running into while implementing it, and the solutions they're coming up with. </p>
+        
+        <h3 style= "text-align: center;"> <a href="https://www.glsen.org/blog/including-lgbt-content-sex-education-four-wrong-ways-and-one-right-one/" target="_blank"> "Including LGBT-Content in Sex Education: Four Wrong Ways (and One Right One)" </a> </h3>
+            <p style="text-align: center;"> This GLSEN article discusses in what ways sex ed curricula has failed to include LGBTQ+ -indetifying students and presnts solutions to solve that problem. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.impactprogram.org/topics/sex-ed/" target="_blank"> The Impact Program </a> </h3>
+            <p style="text-align: center;"> The Impact Program has developed independent sex ed curriculum with a focus on LGBTQ+ sex. There are video-presented lessons to break down the plethora of information, with lessons varying depending on sexual orientations and gender indentities. </p>
+    </div>
+    
+    <div id="tabs-7" class="resource_links"  style="display:none;">
+        <h2 style="text-align: center; color: #B79AEA; font-size: 25px;"> Other Resources </h2>
+        <h3 style= "text-align: center;"> <a href="http://lgbt.foundation/" target="_blank"> The LGBT Foundation </a> </h3>
+            <p style="text-align: center;"> The LGBT Foundation is a culminating website consisting of charities, news, and hotlines, as well as job and volunteer opportunities for LGBTQ+ individuals. They also have LGBTQ+ -inclusive locations where you can get tested for STIs. <b> NOTE: Check out the gender identity map, under “LGBTQ+ youth” tab.) </b> </p>
+        
+        <h3 style= "text-align: center;"> <a href="https://gaycenter.org/" target="_blank"> The Gay Center </a> </h3>
+            <p style="text-align: center;"> The Gay Center is the ultimate site for LGBTQ+ people. It provides you with help specific to your orientation and opens up to more resources on all the associated labels. It's available to people from all areas but the events provided are specific to New York City. </p>
+        
+        <h3 style= "text-align: center;"> <a href="https://www.buzzfeed.com/lgbt" target="_blank"> LGBTQ+ Buzzfeed </a> </h3>
+            <p style="text-align: center;"> WHAT CAN I SAY IT'S GAY BUZZFEED </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://transgenderuniverse.com" target="_blank"> Transgender Universe </a> </h3>
+            <p style="text-align: center;"> The Transgender Universe is a place for transgender people to go for everything and anything; it has transgender news, blogs, politics, and a hotline for the US and Canada. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.criticalmediaproject.org/cml/topicbackground/lgbt/" target="_blank"> The Critical Media Project </a> </h3>
+            <p style="text-align: center;"> The Critical Media Project is working to change mainstream media to be more LGBTQ+ inclusive and NOT have LGBTQ+ characters solely centered around their sexuality. </p>
+        
+        <h3 style= "text-align: center;"> <a href="http://www.huffingtonpost.com/mark-pino/the-necessity-of-lgbt-inclusive-curriculum_b_6928438.html" target="_blank"> "The Necessity of LGBT-Inclusive Curriculum" </a> </h3>
+            <p style="text-align: center;"> This <i> Huffington Post </i> article explains how educating the LGBT community will help decrease the amount of bullying and make LGBTQ+ teens feel safer and like a part of the whole community. </p>
+    </div>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> Back to Top </button>
+    
+<footer>
+    <hr>
+    Juliana Parra, Colleen Avila, Alaya Barnett | Washington, D.C. | Girls Who Code Summer 2017
+</footer>
+
+</body>
+</html>

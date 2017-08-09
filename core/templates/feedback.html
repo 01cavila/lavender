@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    
+  <title> Feedback | Lavender </title>
+  <link rel="title icon" href= "{% static "images/lavender.ico" %}">
+
+    
+  <link rel="stylesheet" type="text/css" href="{% static "css/all_pages.css" %}">
+  <script src="{% static "js/all_pages.js" %}"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kalam|Open+Sans" rel="stylesheet">
+    
+  <style>
+      div{
+          border: 3px solid #B79AEA;
+      }
+        p{
+
+           
+
+            margin: 25px; 
+            padding: 5px;
+			width: 950px:
+        }
+      #nope{
+          float: right;
+      }
+  </style>
+
+<script>
+    function display(){
+        var ans = document.getElementById("name").value
+        document.getElementById("answer").innerHTML="Thank you! We appreciate your feedback!";
+        return false;
+    }
+    function popUp(){
+        document.getElementById("answer").innerHTML="";
+        document.getElementById("name").value="";
+    }
+  </script>
+
+
+
+</head>
+
+<body>
+    
+
+    <a href="{% url 'index' %}"><img src= "{% static "images/logo.png" %}" alt="lavender logo" style="width: 300px; height: 75px; border: none;"></a>
+
+    <nav>
+
+        <ul class= "main">
+            <li><a href= "{% url 'resources' %}"> Resources </a></li>
+            <li><a href= "{% url 'login' %}"> Q + A </a></li>
+            <li><a href= "{% url 'profile' %}"> Profile </a></li>
+        </ul>
+    </nav>
+
+ <h1 style="text-align: center;"> We're always working on our site so if you have any suggestions for improvement, please fill out the form below! </h1>
+    
+    <section id="nope">
+    <h3> Spotlight Suggestions: </h3>
+    <form>
+        Your name:
+        <input type="text" name="name" id="name">
+        <br>
+        
+        Name of the LGBTQ+ Figure Suggestion:
+        <input type="text" name="spotlight_name" required="">
+        <br>
+        
+        Link to their Work:
+        <input type="link" name="spotlight_work" required="">
+        <br>
+        
+        <textarea rows= "4" cols= "50" name="comment" form="usrform" required="" style="font-size: 14px; margin-right: 200px;">Why do you want us to feature them?</textarea>
+        <br>
+        
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    </section>
+
+    <section id="answer">
+    <h3 style="margin-left: 100px;"> General Feedback: </h3>
+    <form method="post" action="" onsubmit="return display()" style="margin-left: 100px;">
+        Your name:
+        <input type="text" name="name" required="name">
+        <br>
+        
+        <textarea rows= "4" cols= "50" name="comment" form="usrform" required="" style="font-size: 14px;"> What do you want us to change about this site? </textarea>
+        <br>
+        
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    </section>
+    
+    <h2 style="margin-top: 200px;"> Other Members' Feedback you can Vote on! </h2>
+    <img src="{% static 'images/arrows.png' %}" alt="arrows for voting" style="width: 100px; height: 150px; border: none; float: right; margin-right: 65px; margin-top: 25px; float: top;">
+    <div class= feedback>
+        <p> <b> Sam Suggests: </b> This website should have an LGBTQ+ newspage! That way we can go there to see centralized breaking news centered around our community. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sapien luctus, posuere lacus quis, faucibus nulla. Praesent pharetra sollicitudin tellus, sit amet euismod risus cursus at. Aliquam laoreet justo eget mi accumsan, quis porta urna interdum. Nulla bibendum ullamcorper diam ac dapibus. Nullam tempus sapien vel venenatis sodales. Sed a semper enim. Sed imperdiet nulla ornare, placerat odio id, faucibus magna. Suspendisse ac auctor nibh. Proin interdum bibendum elit, a scelerisque augue viverra eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In imperdiet interdum magna. Sed eget hendrerit felis. Curabitur vehicula lorem vehicula augue facilisis, vel sagittis tortor varius. </p>
+    </div>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> Back to Top </button>
+        
+
+
+<footer>
+    <hr>
+    Juliana Parra, Colleen Avila, Alaya Barnett | Washington, D.C. | Girls Who Code Summer 2017
+</footer>
+</body>
+    
+</html>

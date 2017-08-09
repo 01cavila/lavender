@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    
+  <title> Home | Lavender </title>
+  <link rel="title icon" href= "{% static "images/lavender.ico" %}">
+    
+  <link rel="stylesheet" type="text/css" href="{% static "css/all_pages.css" %}">
+  <script src="{% static "js/all_pages.js" %}"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kalam|Open+Sans" rel="stylesheet">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    a:link {
+        color: purple;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #B79AEA;
+        text-decoration: none;
+    }
+    .a:visited {
+        color: purple;
+        text-decoration: none;
+    }
+</style>    
+</head>
+
+<body>
+    
+    <a href="{% url 'index' %}"><img src="{% static "images/logo.png" %}" alt="lavender logo" style="width: 300px; height: 75px; border: none;"></a>
+    <h1> Welcome to Lavender! </h1>
+    <nav>
+        <ul class= "main" >
+            <li style="width: 500px;"><a href= "{% url 'resources' %}"> Resources </a></li>
+            <li style="width: 500px;"><a href= "{% url 'login' %}"> Q + A </a></li>
+            <li style="width: 500px;"><a href="{% url 'feedback' %}"> Feedback </a></li>
+            <li style="width: 500px;"><a href="{% url 'profile' %}"> Profile </a></li>
+        </ul>
+    </nav>
+
+<div class="slideshow" style="max-width:800px">
+  <video class="mySlides" controls="controls" width="300" height="400" name="us- here we are" src="{% static "images/us.mov" %}" style="margin-left: 475px;"></video><img class="mySlides" src="{% static "images/gwc_rainbow.JPG" %}" style="width: 400px; margin-left: 425px;">
+  <img class="mySlides" src="{% static "images/prideflag.jpg" %}" style="width: 400px; margin-left: 425px; ">
+</div>
+
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)" style= "margin-left: 595px;"> ⇠</button>
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)"> ⇢ </button>
+    
+    <h2 style="border-bottom: 2px dotted #B79AEA;"> About this project: </h2>
+      <img src="{% static "images/rainbow_city.jpg" %}" alt="filler photo 'rainbow city'" style="width: 200px; height: 245; float: right; margin: 10px;">
+        <h3 style="margin-left: 15px;"> Who We Are & Our Vision </h3>
+            <p style="margin-left: 15px;"> Our names are Juliana, Colleen, and Alaya and we're three girls who met at Girls Who Code and decided to create this website as our final project! Our aim was to create a safe, inclusive, non-judgemental space for LGBTQ+ -indentifying individuals to give and receive advice and learn about their community. We also wanted to create an adaptable space determined by its users (hence the feedback page) and to have it provide a wide variety of sources and information about the LGBTQ+ community.</p>
+
+        <h3 style="margin-left: 15px;"> What is Lavender? </h3>
+            <p style="margin-left: 15px;"> We named our site "Lavender" because of lavender linguistics, a term for the particular ways members of the LGBTQ+ community speak amongst each other, including speech patterns, pronunciation, certain vocabulary, as well as slang. </p>
+    
+    <h2 style="border-bottom: 2px dotted #B79AEA;"> 🌟 Our Monthly Spotlight 🌟 </h2>
+
+        <img src="{% static "images/spotlight/nadiamorris.jpg" %}" alt="spotlight:" style="width: 175px; height: 175px; float: left; margin-right: 10px;">
+        <h3> Nadia Morris </h3>
+            <p> <a href="https://www.linkedin.com/in/reversegremlin/" target="_blank"> Nadia Morris </a> is a woman in technology, specifically in engineering, design, and product development. She works for <a href= "http://about.att.com/innovationblog/author/nadiamorris" target="_blank"> AT&T</a>, her current position being in charge of the Lead Innovation Engineering team at the company's Foundry in California. Morris is an openly transgender women, who spent the early years of her career in the body of a man. For the last 10 years, she's been transitioning as female. She's an advocate for workforce diversity, supporting causes such as Lesbians Who Tech and Black Girls Code. Morris has been very successful throughout her career as a software engineer, having acquired over 20 patents in network security and mobile app development. </p>
+            <p> <b> This is where we spotlight LGBTQ+ figures! This section can feature anyone, ranging from people with traditional careers to media figures (and anyone in between!). If you have any suggestions for future spotlights, fill out the form on the Feedback page! </b> </p>
+
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> Back to Top </button>
+    
+<footer>
+    <hr>
+    Juliana Parra, Colleen Avila, Alaya Barnett | Washington, D.C. | Girls Who Code Summer 2017
+</footer>
+</body>
+    
+</html>
